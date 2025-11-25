@@ -15,7 +15,7 @@ def build_ann():
     return model
 
 
-pipe = joblib.load("./house_buying_ann_pipeline.pkl")
+pipe = joblib.load("house_buying_ann_pipeline.pkl")
 
 st.title("🏠 House Purchase Decision Prediction")
 st.write("Enter the property and customer details below to predict purchase decision.")
