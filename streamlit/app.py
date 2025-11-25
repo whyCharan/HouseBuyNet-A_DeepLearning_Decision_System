@@ -15,8 +15,12 @@ def build_ann():
     return model
 
 
-pipe = joblib.load("/mnt/data/house_buying_ann_pipeline.pkl")
+import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "house_buying_ann_pipeline.pkl")
+
+pipe = joblib.load(model_path)
 
 st.title("🏠 House Purchase Decision Prediction")
 st.write("Enter the property and customer details below to predict purchase decision.")
